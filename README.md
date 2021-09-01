@@ -9,7 +9,7 @@ Note that if you have Docker Desktop installed, it'll be easier on subsequent ro
 ## EE Installer Wizard
 Once things are running, you'll want to go to `eestarter.localhost:8080/admin.php`.  There you'll be prompted by an install wizard.  You'll want to enter the following values for the following fields
 
--Server Address:**db** (this one is a bit confusing, but what they're really asking is where the database is located)
+- Server Address:**db** (this one is a bit confusing, but what they're really asking is where the database is located)
 - DB Name:**ee_starter_db**
 - DB Username:**ee_user**
 - DB Password:**password**
