@@ -1,0 +1,30 @@
+version: "3.3"
+
+services:
+  db:
+    image: mysql
+    container_name: db
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: ee_starter_db
+      MYSQL_USER: ee_user
+      MYSQL_PASSWORD: password
+    ports:
+      - 6033:3306
+    volumes:
+      - dbdata:/var/lib/mysql
+  server:
+    image: nginx
+    ports:
+      - 8080:80
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+  php:
+    build:
+      context: ./php-build/
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/var/www/html
+volumes:
+  dbdata:
