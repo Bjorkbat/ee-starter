@@ -3,7 +3,6 @@ version: "3.3"
 services:
   db:
     image: mysql
-    container_name: db
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: ee_starter_db
